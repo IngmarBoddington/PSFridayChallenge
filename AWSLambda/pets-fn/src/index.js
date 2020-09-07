@@ -1,4 +1,6 @@
+const tracer = require('appdynamics-lambda-tracer');
 var AWS = require('aws-sdk')
+tracer.init();
 
 // Gets fixed list of pets
 function getPets() {
@@ -33,7 +35,7 @@ exports.handler = async (event) => {
             return response;
         case "products" :
             var params = {
-                FunctionName : 'FUNCTION_NAME_HERE', // here set another AWS Function Name (just a name, not ARN)
+                FunctionName : 'products-fn', // here set another AWS Function Name (just a name, not ARN)
                 InvocationType : 'RequestResponse', 
                 Payload : '{"input": "products"}'
             };
@@ -45,3 +47,4 @@ exports.handler = async (event) => {
             return response;
     }
 };
+tracer.mainModule(module);

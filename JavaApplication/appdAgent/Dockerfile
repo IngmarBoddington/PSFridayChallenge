@@ -2,9 +2,9 @@
 FROM openjdk:8-jdk-alpine
 
 # Setting environemnt variables
-ENV BUCKET_NAME <bucket_name_here>
-ENV REGION_NAME <region_here>
-ENV APPD_AGENT_VERSION <agent_version_here>
+ENV BUCKET_NAME chadnaningmarnode
+ENV REGION_NAME eu-west-2
+ENV APPD_AGENT_VERSION 20.6.0.30555
 
 ENV APPSERVER_AGENT_HOME /opt/appdynamics/AppServerAgent/
 

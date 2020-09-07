@@ -28,13 +28,13 @@ class WelcomeController {
 	public String welcome() {
 		return "welcome";
 	}
-	
+
 	@GetMapping("/lambda")
 	public String lambda() {
-		
-		String functionArn = "arn:aws:lambda:<REGION>:<ACCOUNT_ID>:function:<FUNCTION_NAME>";
-		String accessKey = "YOUR_ACCESS_KEY_HERE";
-		String accessKeySecret = "YOUR_SECRET_HERE";
+
+		String functionArn = "arn:aws:lambda:eu-west-2:906527616204:function:pets-fn";
+		String accessKey = "AKIA5GEKBVTGPAQW27EL";
+		String accessKeySecret = "SECRET";
 		Regions region = Regions.EU_WEST_2;
 		String inputPayload = "products";
 
